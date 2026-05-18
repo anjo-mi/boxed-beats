@@ -4,6 +4,10 @@
 
 A custom beat licensing platform built for a single producer/client. The client uploads beats,associates uploaded licensing contracts to them, and sells those contracts to artists. Artists can browse and preview all beats freely, download MP3s for free, and purchase WAV or WAV + Trackout licenses via contract. This is a solo-producer storefront, not a marketplace — all beats belong to one artist.
 
+## Claude Code Instructions
+
+Anytime Claude Code is prompted, refer to CHANGES.md in the root of the project to log the changes, following the instructions and the format given in the example.
+
 ### User Roles
 
 - **Guest** — can browse, search/filter, play beats, download MP3s, view contract details
@@ -395,6 +399,11 @@ Protected (Admin only). Create or edit a contract linked to a beat.
 
 - Libraries: shadcn base, Zustand (add to cart), react-countdown
 - Shows: coverage type, price, discount badge, streams/downloads allowed, expiration
+
+**Sign Up / Log In**
+
+- Use the Auth Modal to create two modals, one for signing up, and one for signing in, each with a link to the other
+- This should drive the state of mayn portions of the program
 
 ---
 

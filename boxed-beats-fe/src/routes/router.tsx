@@ -63,10 +63,7 @@ const accountRoute = createRoute({
 const checkoutRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/checkout',
-  beforeLoad: () => {
-    const role = useAuthStore.getState().role
-    if (role === 'guest') throw redirect({ to: '/' })
-  },
+  // No beforeLoad guard — guests can view their cart; auth gate is handled inline
   component: () => withSuspense(CheckoutPage),
 })
 

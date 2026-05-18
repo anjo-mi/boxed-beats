@@ -8,7 +8,6 @@ export interface Beat {
   wavUrl: string
   trackoutUrl: string
   waveformPeaks: number[]
-  contracts: BeatContract[]
   createdAt: string
 }
 
