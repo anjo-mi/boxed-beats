@@ -462,4 +462,16 @@ This file is to be used by Claude Code to document the prompt with which it was 
 
 ---
 
+> User Prompt: Fix Netlify build failures — missing braintree-web-drop-in types and Motion ease tuple type error
+> Date: 18 May 2026, 1:41 AM EDT
+>
+> File Added: boxed-beats-fe/src/braintree-web-drop-in.d.ts
+> - Added `declare module 'braintree-web-drop-in'` shim to silence TS7016; braintree-web-drop-in ships no type declarations
+>
+> File Changed: boxed-beats-fe/src/pages/admin/AdminDashboardPage.tsx
+> - Line 48: `ease: [0.22, 1, 0.36, 1]` → `ease: [0.22, 1, 0.36, 1] as [number, number, number, number]`
+> - Motion's `Variants` type requires a 4-tuple for cubic-bezier ease arrays, not `number[]`
+
+---
+
 ## Back-end Changes
